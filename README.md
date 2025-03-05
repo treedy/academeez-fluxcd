@@ -1,0 +1,2 @@
+# academeez-fluxcd
+Course repo
