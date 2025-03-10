@@ -11,7 +11,3 @@ spec:
     kind: HelmRepository
     name: ingress-nginx
     namespace: nginx
-  values:
-    controller:
-      publishService:
-        enabled: true
