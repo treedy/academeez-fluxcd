@@ -5,7 +5,7 @@ metadata:
   namespace: nginx
 spec:
   chart: nginx-ingress
-  version: 4.0.x
+  version: 2.0.x
   interval: 8h
   sourceRef:
     kind: HelmRepository
