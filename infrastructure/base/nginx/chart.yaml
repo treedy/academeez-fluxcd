@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmChart
 metadata:
   name: ingress-nginx
@@ -10,4 +10,3 @@ spec:
   sourceRef:
     kind: HelmRepository
     name: ingress-nginx
-    namespace: nginx
