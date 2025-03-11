@@ -1,0 +1,3 @@
+resources:
+  - "./helm_repo.yaml"
+  - "./helm_release.yaml"
