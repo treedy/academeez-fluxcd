@@ -9,4 +9,4 @@ spec:
   interval: 8h
   sourceRef:
     kind: HelmRepository
-    name: ingress-nginx
+    name: nginx
