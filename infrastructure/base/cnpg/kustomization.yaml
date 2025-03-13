@@ -1,0 +1,4 @@
+resources:
+  - "./namespace.yaml"
+  - "./cnpg_helm_repo.yaml"
+  - "./cnpg_helm_release.yaml"
