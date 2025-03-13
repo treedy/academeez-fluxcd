@@ -1,4 +1,6 @@
 resources:
   - "./namespace.yaml"
+  - "./pgsql_secret-sealed.yaml"
   - "./helm_repository.yaml"
   - "./helm_release.yaml"
+  - "./pg_db.yaml"
