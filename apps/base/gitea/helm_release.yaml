@@ -1,0 +1,46 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: gitea
+  namespace: gitea
+spec:
+  chart:
+    spec:
+      chart: gitea
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: gitea
+      version: 11.0.x
+  interval: 12h0m0s
+  values: |-
+    gitea:
+      config:
+        database:
+          type: postgres
+      additionalConfigFromEnvs:
+      - name: GITEA__DATABASE__HOST
+        valueFrom:
+          secretKeyRef:
+            name: pgsql-secret
+            key: host
+      - name: GITEA__DATABASE__PASSWD
+        valueFrom:
+          secretKeyRef:
+            name: pgsql-secret
+            key: password
+            key: host
+      - name: GITEA__DATABASE__NAME
+        valueFrom:
+          secretKeyRef:
+            name: pgsql-secret
+            key: name
+      - name: GITEA__DATABASE__USER
+        valueFrom:
+          secretKeyRef:
+            name: pgsql-secret
+            key: user
+    postgresql:
+      enabled: false
+    postgresql-ha:
+      enabled: false
