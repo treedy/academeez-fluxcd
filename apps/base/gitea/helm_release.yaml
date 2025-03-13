@@ -13,7 +13,7 @@ spec:
         name: gitea
       version: 11.0.x
   interval: 12h0m0s
-  values: |-
+  values:
     gitea:
       config:
         database:
@@ -29,7 +29,6 @@ spec:
           secretKeyRef:
             name: pgsql-secret
             key: password
-            key: host
       - name: GITEA__DATABASE__NAME
         valueFrom:
           secretKeyRef:
