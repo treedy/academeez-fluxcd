@@ -11,10 +11,5 @@ configMapGenerator:
     files:
       - values.yaml
 
-# secretGenerator:
-#   - name: pgsql-secrets
-#     files:
-#       - pgsql_secrets.yaml=pgsql_secret-sealed.yaml
-
 configurations:
   - "./kustomizeconfig.yaml"
