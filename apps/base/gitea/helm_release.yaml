@@ -12,6 +12,7 @@ spec:
         kind: HelmRepository
         name: gitea
       version: 11.0.x
-      valuesFiles:
-        - values.yaml
   interval: 12h0m0s
+  valuesFrom:
+    - kind: ConfigMap
+      name: gitea-values
