@@ -13,5 +13,5 @@ spec:
         name: gitea
       version: 11.0.x
       valuesFiles:
-        - "helm_values.yaml"
+        - helm_values.yaml
   interval: 12h0m0s
